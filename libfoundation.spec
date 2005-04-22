@@ -16,7 +16,7 @@ BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	gcc-objc
-BuildRequires:	gnustep-make >= 1.10.0
+BuildRequires:	gnustep-make-devel >= 1.10.0
 BuildRequires:	libobjc-lf2-devel
 # should be autodetected
 #Requires:	libobjc-lf2
@@ -36,7 +36,7 @@ OpenStep.
 Summary:	The header files for the libFoundation Objective-C library
 Summary(pl):	Pliki nag³ówkowe biblioteki Objective-C libFoundation
 Group:		Development/Libraries
-Requires:	gnustep-make >= 1.10.0
+Requires:	gnustep-make-devel >= 1.10.0
 Requires:	%{name} = %{version}-%{release}
 #AutoReqProv:	off
 
