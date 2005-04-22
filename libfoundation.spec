@@ -1,5 +1,4 @@
 %define		libf_makeflags	-w
-%define		__source	.
 
 Summary:	libFoundation Objective-C library
 Summary(pl):	Biblioteka Objective-C libFoundation
