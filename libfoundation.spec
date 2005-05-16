@@ -1,16 +1,17 @@
 %define		libf_makeflags	-w
+%define		datatrunk	200503150006
 
 Summary:	libFoundation Objective-C library
 Summary(pl):	Biblioteka Objective-C libFoundation
 Name:		libfoundation
-Version:	1.0
-Release:	62.1
+Version:	r98
+Release:	1
 Vendor:		OpenGroupware.org
 License:	libFoundation license
 Group:		Libraries
-Source0:	http://download.opengroupware.org/sources/trunk/%{name}-trunk-latest.tar.gz
+Source0:	http://download.opengroupware.org/sources/trunk/%{name}-trunk-%{version}-%{datatrunk}.tar.gz
+# Source0-md5:	c28557d5e82d1909f64c74bdeff5d4c2
 URL:		http://www.opengroupware.org/
-#AutoReqProv:	off
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
@@ -18,8 +19,6 @@ BuildRequires:	flex
 BuildRequires:	gcc-objc
 BuildRequires:	gnustep-make-devel >= 1.10.0
 BuildRequires:	libobjc-lf2-devel
-# should be autodetected
-#Requires:	libobjc-lf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}.%{release}-root-%(id -u -n)
 
 %description
@@ -38,7 +37,6 @@ Summary(pl):	Pliki nag³ówkowe biblioteki Objective-C libFoundation
 Group:		Development/Libraries
 Requires:	gnustep-make-devel >= 1.10.0
 Requires:	%{name} = %{version}-%{release}
-#AutoReqProv:	off
 
 %description devel
 libFoundation Objective-C development package.
@@ -63,12 +61,8 @@ install -d $RPM_BUILD_ROOT%{_libdir}/GNUstep/System/Library/Makefiles/Additional
 
 %{__make} %{libf_makeflags} install \
 	INSTALL_ROOT_DIR=$RPM_BUILD_ROOT \
-	GNUSTEP_INSTALLATION_DIR=$RPM_BUILD_ROOT%{_prefix} \
+	GNUSTEP_INSTALLATION_DIR=$RPM_BUILD_ROOT%{_libdir}/GNUstep/System \
 	FHS_INSTALL_ROOT=$RPM_BUILD_ROOT%{_prefix}
-
-rm -f $RPM_BUILD_ROOT%{_prefix}/GNUstep/System/Library/Headers/libFoundation/extensions/exceptions/FoundationException.h
-rm -f $RPM_BUILD_ROOT%{_prefix}/GNUstep/System/Library/Headers/libFoundation/extensions/exceptions/GeneralExceptions.h
-rm -f $RPM_BUILD_ROOT%{_prefix}/GNUstep/System/Library/Headers/libFoundation/extensions/exceptions/NSCoderExceptions.h
 
 %clean
 rm -fr $RPM_BUILD_ROOT
@@ -88,8 +82,8 @@ rm -fr $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libFoundation*.so
-%{_libdir}/GNUstep/System/Library/Makefiles/Additional/libFoundation.make
 %{_includedir}/lfmemory.h
 %{_includedir}/real_exception_file.h
 %{_includedir}/Foundation
 %{_includedir}/extensions
+%{_libdir}/GNUstep/System
