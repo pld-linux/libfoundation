@@ -1,16 +1,16 @@
 %define		libf_makeflags	-w
-%define		datatrunk	200503150006
+%define		datatrunk	200508291710
 
 Summary:	libFoundation Objective-C library
 Summary(pl):	Biblioteka Objective-C libFoundation
 Name:		libfoundation
-Version:	r98
+Version:	r124
 Release:	1
 Vendor:		OpenGroupware.org
 License:	libFoundation license
 Group:		Libraries
 Source0:	http://download.opengroupware.org/sources/trunk/%{name}-trunk-%{version}-%{datatrunk}.tar.gz
-# Source0-md5:	c28557d5e82d1909f64c74bdeff5d4c2
+# Source0-md5:	740468288ec8b6dd6b862a49a7863bcf
 URL:		http://www.opengroupware.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
