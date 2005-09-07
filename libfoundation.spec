@@ -5,7 +5,7 @@ Summary:	libFoundation Objective-C library
 Summary(pl):	Biblioteka Objective-C libFoundation
 Name:		libfoundation
 Version:	r124
-Release:	1
+Release:	2
 Vendor:		OpenGroupware.org
 License:	libFoundation license
 Group:		Libraries
@@ -18,7 +18,7 @@ BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	gcc-objc
 BuildRequires:	gnustep-make-libFoundation-devel >= 1.10.0
-BuildRequires:	libobjc-lf2-devel
+BuildRequires:	libobjc-lf2-devel >= r124-2
 BuildRoot:	%{tmpdir}/%{name}-%{version}.%{release}-root-%(id -u -n)
 
 %description
