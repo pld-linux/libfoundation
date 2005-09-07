@@ -17,7 +17,7 @@ BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	gcc-objc
-BuildRequires:	gnustep-make-devel >= 1.10.0
+BuildRequires:	gnustep-make-libFoundation-devel >= 1.10.0
 BuildRequires:	libobjc-lf2-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}.%{release}-root-%(id -u -n)
 
@@ -48,20 +48,20 @@ Pakiet programistyczny biblioteki Objective-C libFoundation.
 %setup -q -n libfoundation
 
 %build
-. %{_libdir}/GNUstep/System/Library/Makefiles/GNUstep.sh
+. %{_libdir}/GNUstep-libFoundation/System/Library/Makefiles/GNUstep.sh
 ./configure
 %{__make} %{libf_makeflags} all
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_libdir}
-install -d $RPM_BUILD_ROOT%{_libdir}/GNUstep/System/Library/Makefiles/Additional
+install -d $RPM_BUILD_ROOT%{_libdir}/GNUstep-libFoundation/System/Library/Makefiles/Additional
 
-. %{_libdir}/GNUstep/System/Library/Makefiles/GNUstep.sh
+. %{_libdir}/GNUstep-libFoundation/System/Library/Makefiles/GNUstep.sh
 
 %{__make} %{libf_makeflags} install \
 	INSTALL_ROOT_DIR=$RPM_BUILD_ROOT \
-	GNUSTEP_INSTALLATION_DIR=$RPM_BUILD_ROOT%{_libdir}/GNUstep/System \
+	GNUSTEP_INSTALLATION_DIR=$RPM_BUILD_ROOT%{_libdir}/GNUstep-libFoundation/System \
 	FHS_INSTALL_ROOT=$RPM_BUILD_ROOT%{_prefix}
 
 %clean
@@ -86,4 +86,4 @@ rm -fr $RPM_BUILD_ROOT
 %{_includedir}/real_exception_file.h
 %{_includedir}/Foundation
 %{_includedir}/extensions
-%{_libdir}/GNUstep/System
+%{_libdir}/GNUstep-libFoundation/System
