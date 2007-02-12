@@ -1,7 +1,7 @@
 %define		libf_makeflags	-w
 
 Summary:	libFoundation Objective-C library
-Summary(pl):	Biblioteka Objective-C libFoundation
+Summary(pl.UTF-8):   Biblioteka Objective-C libFoundation
 Name:		libfoundation
 Version:	1.1.3
 Release:	1
@@ -24,14 +24,14 @@ This package contains the libFoundation library, an Objective-C
 library which aims to implement the Foundation part of the OpenStep
 specification.
 
-%description -l pl
-Ten pakiet zawiera libFoundation - bibliotekê Objective-C, której
-celem jest zaimplementowanie czê¶ci Foundation ze specyfikacji
+%description -l pl.UTF-8
+Ten pakiet zawiera libFoundation - bibliotekÄ™ Objective-C, ktÃ³rej
+celem jest zaimplementowanie czÄ™Å›ci Foundation ze specyfikacji
 OpenStep.
 
 %package devel
 Summary:	The header files for the libFoundation Objective-C library
-Summary(pl):	Pliki nag³ówkowe biblioteki Objective-C libFoundation
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki Objective-C libFoundation
 Group:		Development/Libraries
 Requires:	gnustep-make-devel >= 1.10.0
 Requires:	%{name} = %{version}-%{release}
@@ -39,7 +39,7 @@ Requires:	%{name} = %{version}-%{release}
 %description devel
 libFoundation Objective-C development package.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Pakiet programistyczny biblioteki Objective-C libFoundation.
 
 %prep
