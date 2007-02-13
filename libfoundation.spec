@@ -1,7 +1,7 @@
 %define		libf_makeflags	-w
 
 Summary:	libFoundation Objective-C library
-Summary(pl.UTF-8):   Biblioteka Objective-C libFoundation
+Summary(pl.UTF-8):	Biblioteka Objective-C libFoundation
 Name:		libfoundation
 Version:	1.1.3
 Release:	1
@@ -31,7 +31,7 @@ OpenStep.
 
 %package devel
 Summary:	The header files for the libFoundation Objective-C library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki Objective-C libFoundation
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Objective-C libFoundation
 Group:		Development/Libraries
 Requires:	gnustep-make-devel >= 1.10.0
 Requires:	%{name} = %{version}-%{release}
