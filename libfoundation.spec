@@ -17,7 +17,7 @@ BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	gcc-objc
 BuildRequires:	gnustep-make-devel >= 1.10.0
-BuildRoot:	%{tmpdir}/%{name}-%{version}.%{release}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This package contains the libFoundation library, an Objective-C
