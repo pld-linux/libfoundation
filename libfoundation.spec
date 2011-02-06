@@ -63,7 +63,7 @@ install -d $RPM_BUILD_ROOT%{_libdir}/GNUstep/System/Library/Makefiles/Additional
 	FHS_INSTALL_ROOT=$RPM_BUILD_ROOT%{_prefix}
 
 %clean
-rm -fr $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
